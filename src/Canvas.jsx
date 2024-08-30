@@ -19,7 +19,8 @@ function Canvas({ html, musicName, artistName }) {
         } catch (error) {
           console.error('Failed to convert to image', error);
         }
-      };
+  };
+  
     return (
        
     <div  className='text-white font-Gotham mt-10'>
