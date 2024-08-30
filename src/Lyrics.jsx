@@ -5,7 +5,7 @@ function Lyrics() {
   const [artist, setArtist] = useState('');
   const [title, setTitle] = useState('');
   const [lyrics, setLyrics] = useState('');
-  const [error, setError] = useState('failed');
+  const [error, setError] = useState('');
   const [loader, setLoader] = useState('')
 
 
@@ -26,7 +26,7 @@ function Lyrics() {
         
     
     } catch (err) {
-      setError('Failed to get lyrics');
+      setError('Failed to get lyrics, Make sure to check your inputs');
       console.log('error')
       setLoader('')
       // setError('An error occurred while fetching lyrics');

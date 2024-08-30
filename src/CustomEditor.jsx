@@ -27,28 +27,28 @@ export default function CustomEditor() {
       <div className="flex gap-10">
       <label className="form-control w-full max-w-xs">
   <div className="label">
-    <span className="label-text">Track Name</span>
+    <span className="label-text"> Add Track Name</span>
   </div>
-  <input onChange={handleMusicName}  type="text" placeholder="Type here" className="input input-bordered w-full max-w-xs" />
+  <input onChange={handleMusicName}  type="text" placeholder="Blank Space " className="input input-bordered w-full max-w-xs" />
       </label>
 
       <label className="form-control w-full max-w-xs">
   <div className="label">
-    <span className="label-text">Artiste Name</span>
+    <span className="label-text">Add Artiste Name</span>
   </div>
-  <input onChange={handleArtistName} type="text" placeholder="Type here" className="input input-bordered w-full max-w-xs" />
+  <input onChange={handleArtistName} type="text" placeholder="e.g Taylor Swift" className="input input-bordered w-full max-w-xs" />
         </label>
       </div>
       
       <div className="flex items-center gap-5">
         <input
         onChange={handleTrackCover}
-        type="text" placeholder="Type here"
+        type="text" placeholder="e.g delicate Taylor swift..."
           className="input input-bordered w-full max-w-xs mt-4" />
 
         <button onClick={fetchSongs}  className="mt-4 bg-blue-500 text-white px-4 py-2 rounded font-bold" >
         <span className={`${loader} loading-spinner`}></span>
-          Search Music Cover
+          Search Music Cover 
         </button>
 
 
