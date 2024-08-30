@@ -19,8 +19,7 @@ function Canvas({ html, musicName, artistName }) {
         } catch (error) {
           console.error('Failed to convert to image', error);
         }
-  };
-  
+      };
     return (
        
     <div  className='text-white font-Gotham mt-10'>
@@ -43,8 +42,8 @@ function Canvas({ html, musicName, artistName }) {
                             
                             <div className='mt-10'>
                               
-{              html ?                    <h1 dangerouslySetInnerHTML={{ __html: html }} className='text-white text-xl font-bold'></h1> : 'Add lyrics'
-}                                  </div>
+   { html ? <h1 dangerouslySetInnerHTML={{ __html: html }} className='text-white text-xl font-bold'></h1> : 'Add lyrics'
+        }      </div>
                             <div>
                             <img className='w-24 mt-10' src="./ClipartKey_3235742.png" alt="" />
                             </div>

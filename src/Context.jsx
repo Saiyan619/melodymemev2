@@ -6,6 +6,7 @@ const globalContext = createContext();
 
 export const Context = ({ children }) => {
 
+  const [loader, setLoader] = useState('')
     const [Releases, setReleases] = useState('');
     const [trackCover, settrackCover] = useState('')
     function handleTrackCover(e) {
@@ -30,13 +31,16 @@ export const Context = ({ children }) => {
           }
         };
         
-        try {
+      try {
+          setLoader('loading')
           const response = await axios.request(options);
           // setReleases()
           console.log(response.data.tracks.hits[0].track.images.coverart);
           const coverart = response.data.tracks.hits[0].track.images.coverart;
           setReleases(coverart)
-        } catch (error) {
+          setLoader('')
+      } catch (error) {
+        setLoader('')
           console.error(error);
         }
     }
@@ -44,7 +48,7 @@ export const Context = ({ children }) => {
     
       
   return (
-      <globalContext.Provider value={{Releases, trackCover, setReleases, fetchSongs, handleTrackCover}}>
+      <globalContext.Provider value={{Releases, trackCover, loader, setReleases, fetchSongs, handleTrackCover}}>
           {children}
       </globalContext.Provider>
   )
